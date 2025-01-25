@@ -3793,7 +3793,11 @@ class wpdb {
 		}
 
 		if ( null === $replaced_query ) {
-			$replaced_query = preg_replace( '/\((?!\s*select)[^()]+\)/i', '()', substr( $query, 0, min( strlen( $query ), 1000000 ) ) );
+			$replaced_query = preg_replace( 
+				'/\((?!\s*select)[^()]+\)/i',
+				 '()', 
+				 substr( $query, 0, min( strlen( $query ), 1000000 ) ) 
+			);
 		}
 
 		$query = $replaced_query;
