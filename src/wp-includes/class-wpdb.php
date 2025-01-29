@@ -3793,7 +3793,7 @@ class wpdb {
 		}
 
 		if ( null === $replaced_query ) {
-			$replaced_query = preg_replace( 
+			$replaced_query = preg_replace(
 				'/\((?!\s*select)[^()]+\)/i',
 				 '()', 
 				 substr( $query, 0, min( strlen( $query ), 1000000 ) ) 
